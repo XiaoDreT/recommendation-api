@@ -1,6 +1,0 @@
-#Ignoring virtualenv folder containing large Python packages. Heroku already install the packages in requirements.txt on its end
-recommendation-api/
-#Ignoring pycache folder
-__pycache__/
-#Ignoring shows_vectorizer as the API will load tfidf_vectorizer.pickle not generate it from scratch
-movies_vetorizer.py

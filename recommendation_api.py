@@ -11,12 +11,15 @@ df1 = pd.read_csv('tmdb_5000_movies.csv')
 
 tf_matrix = pickle.load(open('tfidf_matrix.pkl', 'rb'))
 
-@app.route('/api/', methods=['POST'])
+@app.route('/', methods=['POST'])
 
 def recommend():
     title = request.json['title']
-    recommendations = film_recommendations(title)
-    return jsonify({'title': title, 'recommendations': recommendations.to_dict()}), 200
+    if title not in df1['title'].values:
+        return jsonify({'error': 'Film tidak ada dalam dataset, input title harus film yang ada pada dataset.'}), 404
+    else:
+        recommendations = film_recommendations(title)
+        return jsonify({'title': title, 'recommendations': recommendations.to_dict()}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

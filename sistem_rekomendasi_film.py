@@ -23,6 +23,7 @@ df = pd.read_csv('tmdb_5000_credits.csv')
 df.head()
 
 df1 = pd.read_csv('tmdb_5000_movies.csv')
+df1.merge(df, left_on='id', right_on='movie_id')
 df1.head()
 
 """## **Data Understanding**
@@ -75,8 +76,13 @@ cosine_sim
 
 # Fungsi yang menerima judul film sebagai input dan output film yang paling mirip
 def film_recommendations(title, cosine_sim=cosine_sim):
-    # Mendapatkan indeks film yang cocok dengan judul film
-    idx = indeks[title]
+    # Mendapatkan indeks film yang sesuai dengan judul
+    idx = df1.index[df1['title'] == title].tolist()
+    
+    if not idx:
+        raise ValueError(f"Movie title '{title}' not found in the dataset.")
+    
+    idx = idx[0]
 
     # Mendapatkan skor kemiripan (similarity) dari semua film dengan film yang dipasangkan
     sim_scores = list(enumerate(cosine_sim[idx]))
@@ -86,6 +92,7 @@ def film_recommendations(title, cosine_sim=cosine_sim):
 
     # Mendapatkan skor dari 10 film yang mirip
     sim_scores = sim_scores[1:11]
+    
 
     # Mendapatkan indeks film
     indeks_film = [i[0] for i in sim_scores]
