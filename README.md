@@ -172,10 +172,6 @@ Jika diformulakan dengan rumus presisi akan mendapatkan hasil sebagai berikut:
 
 Presisi yang didapat adalah 80%. 
 
-### Kesimpulan
-
-*Dengan adanya dua pendekatan algoritma dalam membuat sistem rekomendasi yaitu Content-Based Filtering dan Collaborative Filtering dengan menggunakan metrik evaluasi Precision, membuktikan bahwa pendekatan algoritma ini dapat membuat dan mengembangkan sistem rekomendasi film yang mampu memberikan saran film yang relevan dan personal sehingga pengguna mendapatkan kepuasan dan pengalaman yang menyenangkan dalam menonton film. Solution statements ini dapat dibuktikan dengan adanya sistem rekomendasi yang memberikan "Top 10 Movie Recommendation" kepada pengguna.*
-
 ## Deployment
 
 Pada tahapan ini, Sistem Rekomender yang telah dibuat akan di deploy menggunakan platform Render pada website render.com. Anda dapat mencoba tautan API yang telah di deploy dengan menggunakan aplikasi Postman:
@@ -239,3 +235,7 @@ Start the server
 ### Catatan:
 
 ### Pada proyek ini, versi python yang digunakan adalah **3.10.12** dan juga menggunakan environtment **Virtualenv** yang tersedia pada python, Anda dapat menggunakan environtment “conda” sebagai environtment alternatif yang lain. Ini dapat membantu untuk deploy API Rekomendasi. 
+
+## Kesimpulan
+
+*Dengan adanya dua pendekatan algoritma dalam membuat sistem rekomendasi yaitu Content-Based Filtering dan Collaborative Filtering dengan menggunakan metrik evaluasi Precision, membuktikan bahwa pendekatan algoritma ini dapat membuat dan mengembangkan sistem rekomendasi film yang mampu memberikan saran film yang relevan dan personal sehingga pengguna mendapatkan kepuasan dan pengalaman yang menyenangkan dalam menonton film. Solution statements ini dapat dibuktikan dengan adanya sistem rekomendasi yang memberikan "Top 10 Movie Recommendation" kepada pengguna.*
