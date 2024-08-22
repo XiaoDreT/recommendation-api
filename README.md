@@ -3,7 +3,7 @@
 ## Data Understanding
 Data yang digunakan pada proyek ini diambil dari data The Movie Database (TMDb) yang didapat dari hasil generate The Movie Database API dimana pada dataset ini berisikan tentang 5000 film yang disajikan dalam sebuah dataset format CSV dengan berbagai macam variabel seperti ID film, judul film, cast, crew, dan lain-lain. 
 
-Proyek ini menggunakan 2 dataset sebagai bahan dalam membuat sistem rekomendasi film ini, dimana 2 dataset ini digunakan untuk memprediksi peringkat atau preferensi yang akan diberikan pengguna pada suatu item.
+Proyek ini menggunakan dataset sebagai bahan dalam membuat sistem rekomendasi film ini, dimana dataset ini digunakan untuk memprediksi peringkat atau preferensi yang akan diberikan pengguna pada suatu item.
 
 Pada dataset TMDB 5000 Movie Dataset, jumlah data yang digunakan pada proyek ini dari dataset tersebut berjumlah **5000 data dengan matriks baris dan kolom sebanyak 5000 baris dan 24 kolom** yang berupa film-film yang akan diolah dalam membuat sebuah sistem rekomendasi. Kondisi data yang digunakan pada proyek ini masih terlihat **noise** untuk dilatih dalam model rekomendasi dengan adanya beberapa variabel yang masih memiliki **nilai null atau missing value**. 
 
