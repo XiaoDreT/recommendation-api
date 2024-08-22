@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
 from sistem_rekomendasi_film import film_recommendations
+from flask_cors import CORS
 import pandas as pd
 import pickle
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['JSON_SORT_KEYS'] = False
 
@@ -11,7 +13,7 @@ df1 = pd.read_csv('tmdb_5000_movies.csv')
 
 tf_matrix = pickle.load(open('tfidf_matrix.pkl', 'rb'))
 
-@app.route('/', methods=['POST'])
+@app.route('/search', methods=['POST'])
 
 def recommend():
     title = request.json['title']
